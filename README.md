@@ -14,8 +14,8 @@ kubens argocd
 # Generate GPG key and add it to this repo using git secret tell
 # gpg --armor --export-secret-key $GPG_ID > $GPG_FILE_PATH
 kubectl create secret generic argocd-gitsecret-gpg --from-file=$GPG_FILE_PATH
-kubectl patch configmap argocd-cm -p "$(cat ./argocd-tools/cm-patch_gitsecrets-raw.yaml)"
-kubectl patch deployment argocd-repo-server -p "$(cat ./argocd-tools/repo-server-patch_gitsecrets-raw.yaml)"
+kubectl patch configmap argocd-cm -p "$(cat ./argocd-tools/cm-patch_gitsecret-raw.yaml)"
+kubectl patch deployment argocd-repo-server -p "$(cat ./argocd-tools/repo-server-patch_gitsecret-raw.yaml)"
 ```
 
 # Add Argo APP that uses git secrets
