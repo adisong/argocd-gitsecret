@@ -24,7 +24,7 @@ kubectl patch deployment argocd-repo-server -p "$(cat ./argocd-tools/repo-server
 kubectl create ns guestbook
 argocd app create gitsecrets-raw-guestbook \
     --config-management-plugin gitsecrets-raw \
-    --repo https://github.com/adisong/argocd-test \
+    --repo https://github.com/adisong/argocd-gitsecret \
     --path guestbook-gitsecret \
     --dest-server https://kubernetes.default.svc \
     --dest-namespace guestbook \
