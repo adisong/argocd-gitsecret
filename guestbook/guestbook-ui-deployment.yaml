@@ -18,3 +18,10 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+        volumeMounts:
+          - name: guestbook-secret
+            mountPath: /secrets
+      volumes:
+        - name: guestbook-secret
+          secret:
+            secretName: guestbook-ui-secret

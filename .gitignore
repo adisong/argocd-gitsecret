@@ -1,0 +1,4 @@
+.gitsecret/keys/random_seed
+!*.secret
+guestbook/guestbook-ui-secret.yaml
+*.asc
